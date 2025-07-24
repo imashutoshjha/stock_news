@@ -1,0 +1,88 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:084828571454:task-definition/stock_news_task_definition:1",
+  "containerDefinitions": [
+    {
+      "name": "container-1",
+      "image": "084828571454.dkr.ecr.ap-south-1.amazonaws.com/stock_news:v1",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "name": "container-1-80-tcp",
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        },
+        {
+          "name": "container-1-8501-tcp",
+          "containerPort": 8501,
+          "hostPort": 8501,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "secrets": [
+        {
+          "name": "LLM_SECRETS",
+          "valueFrom": "arn:aws:secretsmanager:ap-south-1:084828571454:secret:LLM_SECRETS-1Ecakd"
+        }
+      ],
+      "ulimits": [],
+      "systemControls": []
+    }
+  ],
+  "family": "stock_news_task_definition",
+  "taskRoleArn": "arn:aws:iam::084828571454:role/ECS-task-execution-role",
+  "executionRoleArn": "arn:aws:iam::084828571454:role/ECS-task-execution-role",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "ecs.capability.secrets.asm.environment-variables"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "3072",
+  "runtimePlatform": {
+    "cpuArchitecture": "ARM64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2025-07-24T18:24:07.927Z",
+  "registeredBy": "arn:aws:iam::084828571454:root",
+  "enableFaultInjection": false,
+  "tags": []
+}
+JSON
+
+CloudShell
+Feedback
