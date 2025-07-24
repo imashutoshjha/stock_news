@@ -115,7 +115,7 @@ with left:
         st.session_state.selected_stocks = []
         st.session_state.generate = False
 
-    if st.button("📊 Generate Report", use_container_width=True):
+    if st.button("📊Updated Generate Report", use_container_width=True):
         if st.session_state.selected_stocks:
             st.session_state.generate = True
         else:
