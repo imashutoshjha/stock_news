@@ -16,7 +16,7 @@ from botocore.exceptions import ClientError
 
 def get_secret():
 
-    secret_name = "aws-secrets"
+    secret_name = "LLM_SECRETS"
     region_name = "ap-south-1"
 
     # Create a Secrets Manager client
