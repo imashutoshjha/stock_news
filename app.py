@@ -144,7 +144,7 @@ with right:
         summaries = generate_news_summary(stock_dict)
 
         # st.markdown("---")
-        st.subheader("📰 News Summaries")
+        st.subheader("📰 updated News Summaries")
         for stock, summary in summaries.items():
             st.markdown(f"""
                 <div class="news-card">
