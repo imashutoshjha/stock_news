@@ -115,7 +115,7 @@ with left:
         st.session_state.selected_stocks = []
         st.session_state.generate = False
 
-    if st.button("📊Updated stocks-Generate Report", use_container_width=True):
+    if st.button("📊stocks-Generate Report", use_container_width=True):
         if st.session_state.selected_stocks:
             st.session_state.generate = True
         else:
@@ -144,7 +144,7 @@ with right:
         summaries = generate_news_summary(stock_dict)
 
         # st.markdown("---")
-        st.subheader("📰 updated News Summaries")
+        st.subheader("📰 News Summaries")
         for stock, summary in summaries.items():
             st.markdown(f"""
                 <div class="news-card">
