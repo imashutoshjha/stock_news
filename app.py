@@ -17,7 +17,7 @@ st.markdown("""
     color: #333;
     border-right: 1px solid #e1e4e8;
   }
-  .stButton>button {
+  .stButton>button { 
     background-color: #ff6b6b !important;
     color: #fff !important;
     border-radius: 4px;
